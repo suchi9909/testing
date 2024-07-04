@@ -1,0 +1,92 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name:Taxify APP
+    Template URI: https://themes.pixelstrap.net/pwa/taxify/
+    Description: This is PWA Html Template
+    Author: Pixelstrap
+    Author URL: https://themeforest.net/user/pixelstrap
+
+----------------------------------------------------------------------------------- */
+///* utils Files  *////
+/* 1.1 animation CSS  */
+/* 1.2 variable CSS  */
+
+
+////* Base Files  *////
+/* 2.1 Reset CSS  */
+/* 2.2 Typography CSS */
+
+////* Components Files  *////
+/* 3.1 Button CSS  */
+/* 3.2 Calender CSS  */
+/* 3.3 Chatting CSS  */
+/* 3.4 Form CSS  */
+/* 3.5 Modal CSS  */
+/* 3.6 Offcanvas CSS  */
+/* 3.7 Ratio CSS  */
+/* 3.8 Slider CSS  */
+/* 3.8 Tab CSS */
+/* 3.10 Title CSS */
+
+////* Layout Files  *////
+/* 4.1 Header css */
+/* 4.2 Nav CSS */
+
+////* Pages Files  *////
+/* 5.1 Authentication CSS */
+/* 5.2 Category CSS */
+/* 5.3 Elements Page CSS */
+/* 5.4 Empty Pages CSS */
+/* 5.5 Home CSS */
+/* 5.7 Location CSS*/
+/* 5.7 Notification CSS */
+/* 5.8 onboarding CSS */
+/* 5.9 Outstation CSS */
+/* 5.10 Page List CSS */
+/* 5.11 Profile CSS */
+/* 5.12 Ride CSS */
+
+////* Themes Files  *////
+/* 6.1 Dark CSS */
+
+/*utils scss files */
+@import "utils/animation";
+@import "utils/variables";
+
+/* base scss files */
+@import "base/reset";
+@import "base/typography";
+
+/* components scss files*/
+@import "components/button";
+@import "components/chatting";
+@import "components/calender";
+@import "components/chatting";
+@import "components/form";
+@import "components/modal";
+@import "components/offcanvas";
+@import "components/ratio";
+@import "components/slider";
+@import "components/tab";
+@import "components/title";
+
+/* layout scss files */
+@import "layout/header";
+@import "layout/nav";
+
+/* pages */
+@import "pages/authentication";
+@import "pages/category";
+@import "pages/elements";
+@import "pages/empty-page";
+@import "pages/home";
+@import "pages/location";
+@import "pages/notification";
+@import "pages/outstation";
+@import "pages/onboarding";
+@import "pages/page-list";
+@import "pages/profile";
+@import "pages/ride";
+
+/* themes */
+@import "themes/dark";

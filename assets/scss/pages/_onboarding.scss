@@ -1,0 +1,225 @@
+/*=============================
+  5.8  onboarding CSS start
+===============================*/
+.onboarding-section {
+    width: 100%;
+    height: 100%;
+    .onboarding-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &.user-intro {
+            background-image: url(../images/background/intro-bg.png);
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: calc(100vh - 400px);
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .vehicle1 {
+            position: absolute;
+            top: 30px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            // transform: rotate(45deg);
+            animation: moveObject1 20s 6000ms infinite;
+        }
+
+        .vehicle2 {
+            position: absolute;
+            top: 30px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            // transform: rotate(-45deg);
+            animation: moveObject2 20s 6000ms infinite;
+        }
+        .vehicle3 {
+            position: absolute;
+            left: 50%;
+            top: 115px;
+            transform: translateX(-50%) !important;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            animation: moveObject3 20s 6000ms infinite;
+        }
+        .onboarding-slider {
+            &.slider1 {
+                background-image: url(../images/onboarding/intro1.png);
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: calc(100vh - 320px);
+                position: relative;
+            }
+            &.slider2 {
+                background-image: url(../images/onboarding/intro2.png);
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: calc(100vh - 320px);
+                position: relative;
+            }
+            .onboarding-content-box {
+                position: fixed;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 600px;
+                width: calc(100% - 40px);
+                bottom: 20px;
+                padding: 40px 20px 20px 20px;
+                text-align: center;
+                background-color: rgba(var(--white), 1);
+                border-radius: 10px;
+                @media (max-width: 600px) {
+                    padding: calc(40px + (60 - 40) * ((100vw - 320px) / (768 - 320))) 20px 20px 20px;
+                }
+
+                .union-img {
+                    display: block;
+                    position: absolute;
+                    top: -123px;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    transform: translateX(-50%);
+                    z-index: 0;
+                    @media (max-width: 425px) {
+                        top: -113px;
+                    }
+                }
+
+                .union-img-dark {
+                    display: none;
+                }
+
+                h2 {
+                    font-weight: 600;
+                    color: rgba(var(--title-color), 1);
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: rgba(var(--content-color), 1);
+                }
+
+                .onboarding-next {
+                    position: relative;
+                    @media (max-width: 600px) {
+                        margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+                    }
+                    .icon {
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px;
+                        margin: 30px auto 0;
+                        --Iconsax-Color: rgba(var(--white), 1);
+                        --Iconsax-Size: 26px;
+                        background-color: rgba(var(--title-color), 1);
+                        border-radius: 100%;
+                        @media (max-width: 600px) {
+                            width: calc(40px + (50 - 40) * ((100vw - 320px) / (768 - 320)));
+                            height: calc(40px + (50 - 40) * ((100vw - 320px) / (768 - 320)));
+                            margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .user-onboarding-content-box {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 600px;
+        width: calc(100% - 40px);
+        bottom: 20px;
+        padding: 80px 20px 20px 20px;
+        text-align: center;
+        background-color: rgba(var(--white), 1);
+        border-radius: 10px;
+        @media (max-width: 600px) {
+            padding: calc(40px + (80 - 40) * ((100vw - 320px) / (768 - 320))) 20px 20px 20px;
+        }
+
+        .union-img {
+            display: block;
+            position: absolute;
+            top: -137px;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: 0;
+            @media (max-width: 500px) {
+                top: -117px;
+            }
+            @media (max-width: 375px) {
+                top: -110px;
+            }
+        }
+
+        .union-img-dark {
+            display: none;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: rgba(var(--title-color), 1);
+        }
+
+        p {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(var(--content-color), 1);
+        }
+
+        .onboarding-next {
+            position: relative;
+            @media (max-width: 600px) {
+                margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+            }
+            .icon {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                margin: 30px auto 0;
+                --Iconsax-Color: rgba(var(--white), 1);
+                --Iconsax-Size: 26px;
+                background-color: rgba(var(--title-color), 1);
+                border-radius: 100%;
+                @media (max-width: 600px) {
+                    width: calc(40px + (50 - 40) * ((100vw - 320px) / (768 - 320)));
+                    height: calc(40px + (50 - 40) * ((100vw - 320px) / (768 - 320)));
+                    margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (768 - 320)));
+                }
+            }
+        }
+    }
+}

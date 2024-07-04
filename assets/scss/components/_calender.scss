@@ -1,0 +1,92 @@
+/*=====================
+  3.2  calender CSS start
+==========================*/
+.mbsc-datepicker {
+    border-top: none !important;
+    border-bottom: none !important;
+
+    .mbsc-datepicker-tab-wrapper {
+        display: block;
+        .mbsc-datepicker-tab-calendar {
+            margin: 15px 10px;
+            box-shadow: 0px 4px 20px 0px rgba(var(--title-color), 0.06);
+            border-radius: 10px;
+
+            .mbsc-calendar {
+                padding-bottom: 0;
+                .mbsc-calendar-wrapper {
+                    border-radius: 10px;
+                    background-color: rgba(var(--white), 1);
+
+                    .mbsc-calendar-header {
+                        .mbsc-calendar-controls {
+                            .mbsc-calendar-title-wrapper {
+                                .mbsc-calendar-button {
+                                    color: rgba(var(--title-color), 1);
+                                }
+                            }
+
+                            .mbsc-calendar-button-prev,
+                            .mbsc-calendar-button-next {
+                                color: rgba(var(--title-color), 1);
+                            }
+                        }
+                    }
+
+                    .mbsc-calendar-slide {
+                        .mbsc-calendar-table {
+                            .mbsc-calendar-week-days {
+                                font-weight: 700;
+                                font-size: 20px;
+                            }
+
+                            .mbsc-calendar-row {
+                                .mbsc-calendar-cell {
+                                    :not(.mbsc-calendar-cell-inner) {
+                                        > div {
+                                            visibility: hidden;
+                                        }
+                                    }
+                                    .mbsc-calendar-cell-inner {
+                                        .mbsc-calendar-cell-text {
+                                            color: rgba(var(--title-color), 1);
+                                        }
+                                    }
+                                    &.mbsc-selected {
+                                        .mbsc-calendar-cell-text {
+                                            background-color: rgba(var(--secondary-color), 1);
+                                            border: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mbsc-datepicker-tab {
+            .mbsc-scroller {
+                .mbsc-scroller-wheel-group-cont {
+                    .mbsc-scroller-wheel-line {
+                        background-color: rgba(var(--box-bg), 1);
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mbsc-scroller-wheel-item {
+        > div {
+            > div {
+                visibility: hidden;
+            }
+        }
+        &.mbsc-selected {
+            color: rgba(var(--title-color), 1);
+            border-radius: 0;
+            background-color: rgba(var(--box-bg), 1);
+        }
+    }
+}
