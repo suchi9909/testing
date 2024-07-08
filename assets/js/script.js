@@ -1,41 +1,25 @@
 /*========================
     Manifest js
  ==========================*/
-// window.onload = () => {
-//   "use strict";
-//   if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker.register("../user-app/sw.js");
-//   }
-// };
-
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-    .then(function(registration) {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-    .catch(function(error) {
-      console.log('Service Worker registration failed:', error);
-    });
-}
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register("../driver-app/sw.js")
-    .then(function(registration) {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-    .catch(function(error) {
-      console.log('Service Worker registration failed:', error);
-    });
-}
-
+window.onload = () => {
+  "use strict";
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+};
 
 // window.onload = () => {
 //   "use strict";
 //   if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker.register("../driver-app/sw.js");
+//     navigator.serviceWorker.register("sw.js").then(function(registration) {
+//       console.log("Service Worker registered with scope:", registration.scope);
+//     }).catch(function(error) {
+//       console.log("Service Worker registration failed:", error);
+//     });
 //   }
 // };
+
+
 
 /*====================
  Ratio js

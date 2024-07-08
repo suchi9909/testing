@@ -6,27 +6,27 @@ var
             {
                 location_latitude: 1.297745,
                 location_longitude: 103.814809,
-                icon_name: '../assets/images/icons/user.png',
+                icon_name: 'assets/images/icons/user.png',
             },
             {
                 location_latitude: 1.277222,
                 location_longitude: 103.862939,
-                icon_name: '../assets/images/icons/destination.png',
+                icon_name: 'assets/images/icons/destination.png',
             },
             {
                 location_latitude: 1.286792,
                 location_longitude: 103.839495,
-                icon_name: '../assets/images/icons/car.png',
+                icon_name: 'assets/images/icons/car.png',
             },
             {
                 location_latitude: 1.280799,
                 location_longitude: 103.847102,
-                icon_name: '../assets/images/icons/car.png',
+                icon_name: 'assets/images/icons/car.png',
             },
             {
                 location_latitude: 1.275337,
                 location_longitude: 103.815249,
-                icon_name: '../assets/images/icons/car.png',
+                icon_name: 'assets/images/icons/car.png',
             }
 
         ]

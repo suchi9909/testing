@@ -14,22 +14,22 @@ dirSwitch?.addEventListener("change", (e) => {
   console.log(checkbox.checked);
   if (checkbox.checked) {
     htmlDom.setAttribute("dir", "rtl");
-    rtlLink.href = "../assets/css/vendors/bootstrap.rtl.min.css";
-    localStorage.setItem("rtlcss", "../assets/css/vendors/bootstrap.rtl.min.css"); 
+    rtlLink.href = "assets/css/vendors/bootstrap.rtl.min.css";
+    localStorage.setItem("rtlcss", "assets/css/vendors/bootstrap.rtl.min.css"); 
     localStorage.setItem("dir", "rtl");
   }
 
   if (!checkbox.checked) {
     htmlDom.setAttribute("dir", "ltr");
-    rtlLink.href = "../assets/css/vendors/bootstrap.css";
-    localStorage.setItem("rtlcss", "../assets/css/vendors/bootstrap.css");
+    rtlLink.href = "assets/css/vendors/bootstrap.css";
+    localStorage.setItem("rtlcss", "assets/css/vendors/bootstrap.css");
     localStorage.setItem("dir", "ltr");
   }
 });
 
 // Rtl
 htmlDom.setAttribute("dir", localStorage.getItem("dir")?localStorage.getItem("dir") : "ltr");
-rtlLink.href = localStorage.getItem("rtlcss")?localStorage.getItem("rtlcss") : "../assets/css/vendors/bootstrap.css";
+rtlLink.href = localStorage.getItem("rtlcss")?localStorage.getItem("rtlcss") : "assets/css/vendors/bootstrap.css";
 
 
 /*====================
