@@ -45,6 +45,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
+        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
       .catch(error => {
@@ -58,6 +59,9 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         return response || fetch(event.request);
+      })
+      .catch(error => {
+        console.error('Fetch error:', error);
       })
   );
 });
@@ -74,5 +78,27 @@ self.addEventListener('activate', event => {
         })
       );
     })
+  );
+});
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache)
+          .then(() => {
+            console.log('All resources have been fetched and cached.');
+          })
+          .catch(error => {
+            console.error('Failed to cache some resources:', error);
+            urlsToCache.forEach(url => {
+              fetch(url).catch(fetchError => console.error('Failed to fetch:', url, fetchError));
+            });
+          });
+      })
+      .catch(error => {
+        console.error('Cache open failed:', error);
+      })
   );
 });
